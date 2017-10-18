@@ -1,11 +1,11 @@
 ﻿$packageArgs = @{
-  packageName		= 'zeal.install'
-  fileType			= 'msi'
-  url				= 'https://bintray.com/artifact/download/zealdocs/windows/zeal-0.3.1-windows-x86.msi'
-  checksum			= '4D93C6D2E93E0DA5663EF78EB73550A2153B8D1A0EDDA803E24F5585F90D3905'
-  checksumType		= 'sha256'
-  silentArgs		= '/quiet'
-  validExitCodes	= @(0,3010)
+  packageName    = 'zeal.install'
+  fileType       = 'msi'
+  url            = 'https://bintray.com/artifact/download/zealdocs/windows/zeal-0.4.0-windows-x64.msi'
+  checksum       = '02C9A27F7E7B63DCE066DB35E78077CBD535C28794D52F8EE66D72F493B6A72F'
+  checksumType   = 'sha256'
+  silentArgs     = '/quiet'
+  validExitCodes = @(0,3010)
 }
 
 Install-ChocolateyPackage @packageArgs

@@ -2,34 +2,59 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>zeal.install</id>
-  <version>0.3.1</version>
-  <title>Zeal (Install)</title>
-  <authors>Zeal Developers</authors>
-  <owners>Artyom Yaremchuk</owners>
-  <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
-  <projectUrl>https://zealdocs.org/</projectUrl>
-  <iconUrl>https://cdn.rawgit.com/zealdocs/zeal/master/src/app/resources/icons/logo/128x128.png</iconUrl>
-  <requireLicenseAcceptance>false</requireLicenseAcceptance>
-  <description>Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/), available for Linux and Windows.
+    <version>0.4.0</version>
+    <title>Zeal (Install)</title>
+    <authors>Zeal Developers</authors>
+    <owners>Artyom Yaremchuk</owners>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <projectUrl>https://zealdocs.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/zealdocs/zeal/master/src/app/resources/icons/logo/128x128.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/), available for Linux and Windows.
 
-    - Quickly search documentation using Alt+Space (or customised) hotkey to display Zeal from any place in your workspace.
-    - Search in multiple sets of documentation at once.
-    - Do not depend on your Internet connection.
-    - Integrate Zeal with IDEA, Sublime Text, or your favourite IDE with a variety of [plugins](https://zealdocs.org/usage.html#plugins).</description>
-  <summary>A simple offline documentation browser</summary>
-  <releaseNotes>Fixed Issues:
+      - Quickly search documentation using Alt+Space (or customised) hotkey to display Zeal from any place in your workspace.
+      - Search in multiple sets of documentation at once.
+      - Do not depend on your Internet connection.
+      - Integrate Zeal with IDEA, Sublime Text, or your favourite IDE with a variety of [plugins](https://zealdocs.org/usage.html#plugins).</description>
+    <summary>A simple offline documentation browser</summary>
+    <releaseNotes>New Features:
 
-    - Fixed random crashing on application start and exit. ([#595](https://github.com/zealdocs/zeal/issues/595))
-    - Fixed web view hanging caused by URLs with no schema. ([#532](https://github.com/zealdocs/zeal/issues/532))
-    - Fixed docset removal on Windows. ([#621](https://github.com/zealdocs/zeal/issues/621))
-    - Fixed race condition (and warning) in docset removal logic.
-    - Fixed docset selection with Select All shortcut (usually Ctrl+A).
+      - Added optional fuzzy search. (#100).
+      - Added support for user-defined styles via custom CSS file. (#268)
+      - Added support for a basic dark theme (webview only). (#466)
+      - Added support for high resolution displays. (#111)
+      - Switched to the CMake build system, support for qmake will be dropped shortly.
+      - The minimally required Qt version bumped to 5.5.1.
+      - As the result of above, libappindicator support is relies on the built-in Qt implementation.
+      - Dropped support for Qt WebEngine.
+      - Removed dependency on Qt Sql by using SQLite directly.
+      - Windows binaries now bundle the new Qt WebKit, which fixes a lot of rendering and stability isses. (#359, #723)
+      - Windows binaries are now 64-bit, and built with MSVC 2015.
 
-    [Git history](https://github.com/zealdocs/zeal/compare/v0.3.0...v0.3.1)</releaseNotes>
-  <copyright>copyright © Zeal Developers, 2013-2016</copyright>
-  <tags>zeal docs dev api admin</tags>
-  <projectSourceUrl>https://github.com/zealdocs/zeal</projectSourceUrl>
-  <bugTrackerUrl>https://github.com/zealdocs/zeal/issues</bugTrackerUrl>
+      Improvements:
+
+      - New tabs now have the search box automatically focused. (#725)
+      - Added a Retry button to the error box appearing on docset list download failure. (#566)
+      - Updated welcome page style (includes a Carbon ad banner, which can be disabled in the settings).
+
+      Fixed Issues:
+
+      - Fixed search for one-character terms. (#698)
+      - Multiple fixes in the search algorithm. (#603, #650, #677)
+      - Fixed navigation in some docsets. (#641)
+      - Fixed portable version not saving docset storage path. (609)
+      - Many rendering and stability issues fixed by switching to the new Qt WebKit. (#359, #723)
+      - Fixed MSI installer not removing custom protocol handlers. (#755)
+
+      Known Issues:
+
+      - Web pages using Fira Sans (e.g., PHP docset) font are rendered in italic. This is an upstream bug with Qt WebKit (#658)
+
+      [Git history](https://github.com/zealdocs/zeal/compare/v0.3.1...v0.4.0)</releaseNotes>
+    <copyright>copyright © Zeal Developers, 2013-2017</copyright>
+    <tags>zeal docs dev api admin</tags>
+    <projectSourceUrl>https://github.com/zealdocs/zeal</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/zealdocs/zeal/issues</bugTrackerUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
