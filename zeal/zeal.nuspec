@@ -51,6 +51,7 @@
     <tags>zeal docs dev api admin</tags>
     <projectSourceUrl>https://github.com/zealdocs/zeal</projectSourceUrl>
     <bugTrackerUrl>https://github.com/zealdocs/zeal/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/zealdocs/packaging-chocolatey/</packageSourceUrl>
     <dependencies>
       <dependency id="zeal.install" version="0.5.0" />
     </dependencies>

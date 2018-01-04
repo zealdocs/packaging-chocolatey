@@ -50,6 +50,7 @@
     <copyright>copyright © Zeal Developers, 2013-2018</copyright>
     <tags>zeal docs dev api admin</tags>
     <projectSourceUrl>https://github.com/zealdocs/zeal</projectSourceUrl>
+    <packageSourceUrl>https://github.com/zealdocs/packaging-chocolatey/</packageSourceUrl>
     <bugTrackerUrl>https://github.com/zealdocs/zeal/issues</bugTrackerUrl>
   </metadata>
   <files>
