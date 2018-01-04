@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>zeal.portable</id>
-    <version>0.4.0</version>
+    <version>0.5.0</version>
     <title>Zeal (Portable)</title>
     <authors>Zeal Developers</authors>
     <owners>Artyom Yaremchuk</owners>
@@ -10,48 +10,44 @@
     <projectUrl>https://zealdocs.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/zealdocs/zeal/master/src/app/resources/icons/logo/128x128.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/), available for Linux and Windows.
+    <description>
+      Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/), available for Linux and Windows.
 
       - Quickly search documentation using Alt+Space (or customised) hotkey to display Zeal from any place in your workspace.
       - Search in multiple sets of documentation at once.
       - Do not depend on your Internet connection.
-      - Integrate Zeal with IDEA, Sublime Text, or your favourite IDE with a variety of [plugins](https://zealdocs.org/usage.html#plugins).</description>
+      - Integrate Zeal with IDEA, Sublime Text, or your favourite IDE with a variety of [plugins](https://zealdocs.org/usage.html#plugins).
+    </description>
     <summary>A simple offline documentation browser</summary>
-    <releaseNotes>New Features:
+    <releaseNotes>
+      **New Features:**
 
-      - Added optional fuzzy search. (#100).
-      - Added support for user-defined styles via custom CSS file. (#268)
-      - Added support for a basic dark theme (webview only). (#466)
-      - Added support for high resolution displays. (#111)
-      - Switched to the CMake build system, support for qmake will be dropped shortly.
-      - The minimally required Qt version bumped to 5.5.1.
-      - As the result of above, libappindicator support is relies on the built-in Qt implementation.
-      - Dropped support for Qt WebEngine.
-      - Removed dependency on Qt Sql by using SQLite directly.
-      - Windows binaries now bundle the new Qt WebKit, which fixes a lot of rendering and stability isses. (#359, #723)
-      - Windows binaries are now 64-bit, and built with MSVC 2015.
+      - Implemented update functionality for docsets installed via XML feeds. ([#289](https://github.com/zealdocs/zeal/issues/289))
 
-      Improvements:
+      **Improvements:**
 
-      - New tabs now have the search box automatically focused. (#725)
-      - Added a Retry button to the error box appearing on docset list download failure. (#566)
-      - Updated welcome page style (includes a Carbon ad banner, which can be disabled in the settings).
+      - Added show/hide options to the tray icon's menu. ([#741](https://github.com/zealdocs/zeal/issues/741))
+      - Tabs are movable.
+      - Double click on the tab bar creates a new tab.
+      - Web view now has a predefined list of zooming level.
+      - Linux: Use dedicated tray icon if theme provides one. ([#770](https://github.com/zealdocs/zeal/issues/770))
+      - Portable version now indicates so in title of the main window.
 
-      Fixed Issues:
+      **Fixed Issues:**
 
-      - Fixed search for one-character terms. (#698)
-      - Multiple fixes in the search algorithm. (#603, #650, #677)
-      - Fixed navigation in some docsets. (#641)
-      - Fixed portable version not saving docset storage path. (609)
-      - Many rendering and stability issues fixed by switching to the new Qt WebKit. (#359, #723)
-      - Fixed MSI installer not removing custom protocol handlers. (#755)
+      - Fixed search result sorting with fuzzy search disabled. ([#679](https://github.com/zealdocs/zeal/issues/679))
+      - Fixed invisible file operations preventing the Docsets dialog from closing. ([#608](https://github.com/zealdocs/zeal/issues/608))
+      - Fixed crashing on some corrupted docset directories. ([#788](https://github.com/zealdocs/zeal/issues/788))
+      - Fixed the app exiting on its own when a new version is available. ([#637](https://github.com/zealdocs/zeal/issues/637))
+      - Windows: Fixed app not gaining focus when invoked from IDE plugins. ([#440](https://github.com/zealdocs/zeal/issues/440))
 
-      Known Issues:
+      **Known Issues:**
 
-      - Web pages using Fira Sans (e.g., PHP docset) font are rendered in italic. This is an upstream bug with Qt WebKit (#658)
+      - Open in new tab doesn't work. ([#851](https://github.com/zealdocs/zeal/issues/851))
 
-      [Git history](https://github.com/zealdocs/zeal/compare/v0.3.1...v0.4.0)</releaseNotes>
-    <copyright>copyright © Zeal Developers, 2013-2017</copyright>
+      [Git history](https://github.com/zealdocs/zeal/compare/v0.4.0...v0.5.0)
+    </releaseNotes>
+    <copyright>copyright © Zeal Developers, 2013-2018</copyright>
     <tags>zeal docs dev api admin</tags>
     <projectSourceUrl>https://github.com/zealdocs/zeal</projectSourceUrl>
     <bugTrackerUrl>https://github.com/zealdocs/zeal/issues</bugTrackerUrl>
