@@ -3,6 +3,9 @@ param (
     [switch] $Force
 )
 
+# Force this script to stop whenever an reror occurs.
+$ErrorActionPreference = "Stop"
+
 import-module -Name $PSScriptRoot\au\AU
 
 $Options = [ordered]@{
