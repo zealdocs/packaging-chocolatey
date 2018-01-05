@@ -1,4 +1,14 @@
+param (
+    [switch] $Push,
+    [switch] $Force
+)
+
 import-module -Name $PSScriptRoot\au\AU
 
-$au_root = $PSScriptRoot
-updateall "*" @{}
+$Options = [ordered]@{
+    Push = $Push
+    Force = $Force
+}
+
+$global:au_Root = $PSScriptRoot
+updateall -Name "*" -Options $Options | Out-Null
