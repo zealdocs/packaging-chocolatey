@@ -8,7 +8,7 @@
   checksum64     = '875a91b0aa91a7dc56ef23b551006fd64b33ebfb16b710e4924c391751e6d515'
   checksumType64 = 'sha256'
   silentArgs     = '/quiet'
-  validExitCodes = @(0,3010)
+  validExitCodes = @(0, 3010)
 }
 
 Install-ChocolateyPackage @packageArgs

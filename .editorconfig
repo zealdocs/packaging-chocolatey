@@ -1,0 +1,18 @@
+# EditorConfig (https://editorconfig.org)
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+
+# While not part of the official specification,
+# max_line_length is supported by many editors and tools.
+max_line_length = 120
+
+[*.ps1]
+# https://docs.chocolatey.org/en-us/create/create-packages#character-encoding
+charset = utf-8-bom

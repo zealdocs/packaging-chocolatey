@@ -1,16 +1,16 @@
-param (
-    [switch] $Push,
-    [switch] $Force
+﻿param (
+  [switch] $Push,
+  [switch] $Force
 )
 
-# Force this script to stop whenever an reror occurs.
+# Force this script to stop whenever an error occurs.
 $ErrorActionPreference = "Stop"
 
 import-module -Name $PSScriptRoot\au\AU
 
 $Options = [ordered]@{
-    Push = $Push
-    Force = $Force
+  Push  = $Push
+  Force = $Force
 }
 
 $global:au_Root = $PSScriptRoot
