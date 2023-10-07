@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>zeal.portable</id>
-    <version>0.5.0</version>
+    <version>0.6.1</version>
     <title>Zeal (Portable)</title>
     <authors>Zeal Developers</authors>
     <owners>Artyom Yaremchuk</owners>
@@ -10,37 +10,29 @@
     <projectUrl>https://zealdocs.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/zealdocs/zeal/master/src/app/resources/icons/logo/128x128.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-      Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/), available for Linux and Windows.
+    <description>Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/), available for Linux and Windows.
 
       - Quickly search documentation using Alt+Space (or customised) hotkey to display Zeal from any place in your workspace.
       - Search in multiple sets of documentation at once.
       - Do not depend on your Internet connection.
-      - Integrate Zeal with IDEA, Sublime Text, or your favourite IDE with a variety of [plugins](https://zealdocs.org/usage.html#plugins).
-    </description>
+      - Integrate Zeal with IDEA, Sublime Text, or your favourite IDE with a variety of [plugins](https://zealdocs.org/usage.html#plugins).</description>
     <summary>A simple offline documentation browser</summary>
-    <releaseNotes>[All changes](https://github.com/zealdocs/zeal/compare/v0.4.0...v0.5.0) | [All closed issues](https://github.com/zealdocs/zeal/milestone/9?closed=1)
-
-**New Features:**
-- Implemented update functionality for docsets installed via XML feeds. (#289) 
+    <releaseNotes>[All changes](https://github.com/zealdocs/zeal/compare/v0.6.0...v0.6.1) | [All closed issues](https://github.com/zealdocs/zeal/milestone/13?closed=1)
 
 **Improvements:**
-- Added show/hide options to the tray icon's menu. (#741)
-- Tabs are movable.
-- Double click on the tab bar creates a new tab.
-- Web view now has a predefined list of zooming level.
-- Linux: Use dedicated tray icon if theme provides one. (#770)
-- Portable version now indicates so in title of the main window.
+- Added Back/Forward to the webview's context menu. (#925)
+- Made search prefixes case insensitive. (#957)
+- Added &lt;kbd&gt;Ctrl+L&lt;/kbd&gt; shortcut for focusing search input field. (#401)
+- Portable version now uses a relative path to the docset storage if it's a subdirectory. (#956)
 
 **Fixed Issues:**
-- Fixed search result sorting with fuzzy search disabled. (#679)
-- Fixed invisible file operations preventing the Docsets dialog from closing. (#608)
-- Fixed crashing on some corrupted docset directories. (#788)
-- Fixed the app exiting on its own when a new version is available. (#637)
-- Windows: Fixed app not gaining focus when invoked from IDE plugins. (#440)
-
-**Known Issues:**
-- Open in new tab doesn't work. (#851)
+- Fixed platform defined shortcut for preferences being ignored.
+- Fixed default fixed font size not saved. (#903)
+- Fixed broken JavaScript links. (#915)
+- Fixed `make install` not updating icon cache. (#922)
+- Set webview background color to white by default. (#892)
+- Fixed a problem preventing docset extraction to path containing non-Latin characters. (#747)
+- Fixed reproducibility of builds once again.
 
 [Download binaries](https://go.zealdocs.org/l/download) | [Contact](https://go.zealdocs.org/l/contact)</releaseNotes>
     <copyright>copyright © Zeal Developers, 2013-2018</copyright>
@@ -49,7 +41,4 @@
     <packageSourceUrl>https://github.com/zealdocs/packaging-chocolatey/</packageSourceUrl>
     <bugTrackerUrl>https://github.com/zealdocs/zeal/issues</bugTrackerUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
