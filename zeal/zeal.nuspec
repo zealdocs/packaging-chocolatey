@@ -1,47 +1,40 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek
+   uppercase omega letter enclosed in quotation marks, you should use an
+   editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>zeal</id>
-    <version>0.6.1</version>
+    <version>0.7.1</version>
     <title>Zeal</title>
-    <authors>Zeal Developers</authors>
-    <owners>Artyom Yaremchuk</owners>
-    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <authors>Oleg Shparber</authors>
+    <owners>trollixx</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <projectUrl>https://zealdocs.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/zealdocs/zeal/master/src/app/resources/icons/logo/128x128.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/zealdocs/zeal@main/src/app/resources/icons/logo/128x128.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/), available for Linux and Windows.
+    <description><![CDATA[Zeal is an offline documentation browser inspired by [Dash](https://kapeli.com/dash/).
 
-      - Quickly search documentation using Alt+Space (or customised) hotkey to display Zeal from any place in your workspace.
-      - Search in multiple sets of documentation at once.
-      - Do not depend on your Internet connection.
-      - Integrate Zeal with IDEA, Sublime Text, or your favourite IDE with a variety of [plugins](https://zealdocs.org/usage.html#plugins).</description>
-    <summary>A simple offline documentation browser</summary>
-    <releaseNotes>[All changes](https://github.com/zealdocs/zeal/compare/v0.6.0...v0.6.1) | [All closed issues](https://github.com/zealdocs/zeal/milestone/13?closed=1)
+    ![Zeal Screenshot](https://i.imgur.com/lWso18u.png)
 
-**Improvements:**
-- Added Back/Forward to the webview's context menu. (#925)
-- Made search prefixes case insensitive. (#957)
-- Added &lt;kbd&gt;Ctrl+L&lt;/kbd&gt; shortcut for focusing search input field. (#401)
-- Portable version now uses a relative path to the docset storage if it's a subdirectory. (#956)
+    ## Features
 
-**Fixed Issues:**
-- Fixed platform defined shortcut for preferences being ignored.
-- Fixed default fixed font size not saved. (#903)
-- Fixed broken JavaScript links. (#915)
-- Fixed `make install` not updating icon cache. (#922)
-- Set webview background color to white by default. (#892)
-- Fixed a problem preventing docset extraction to path containing non-Latin characters. (#747)
-- Fixed reproducibility of builds once again.
-
-[Download binaries](https://go.zealdocs.org/l/download) | [Contact](https://go.zealdocs.org/l/contact)</releaseNotes>
-    <copyright>copyright © Zeal Developers, 2013-2018</copyright>
-    <tags>zeal docs dev api admin</tags>
+    - Over 200 docsets available for immediate download.
+    - Downloaded docsets do not require Internet connection.
+    - Global shortcut support for quick access.
+    - Fast search across installed docsets.
+    - Search prefixes to limit scope to select docsets.
+    - [IDE intergation](https://zealdocs.org/usage.html#plugins): VS Code, IDEA, Sublime Text, and many others.
+]]></description>
+    <summary>A simple offline documentation browser inspired by Dash.</summary>
+    <releaseNotes>https://github.com/zealdocs/zeal/releases/tag/v0.7.1</releaseNotes>
+    <copyright>Copyright © 2015-2024 Oleg Shparber</copyright>
+    <tags>zeal admin api dash dev developer docs docset documentation help tools</tags>
     <projectSourceUrl>https://github.com/zealdocs/zeal</projectSourceUrl>
     <packageSourceUrl>https://github.com/zealdocs/packaging-chocolatey/</packageSourceUrl>
     <bugTrackerUrl>https://github.com/zealdocs/zeal/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="zeal.install" version="0.6.1" />
+      <dependency id="zeal.install" version="0.7.1" />
     </dependencies>
   </metadata>
 </package>
