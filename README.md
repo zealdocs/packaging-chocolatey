@@ -18,6 +18,27 @@ or
 choco install zeal.portable
 ```
 
+## Maintainer Instructions
+
+1. Update `.nuspec` files.
+1. Prepare package:
+
+  ```shell
+  choco pack
+  ```
+
+1. Test installation:
+
+  ```shell
+  choco install --source . <package>
+  ```
+
+1. Publish the package:
+
+  ```shell
+   choco push --source https://push.chocolatey.org/
+   ```
+
 ## Support
 
 - [GitHub Issues](https://github.com/zealdocs/zeal/issues)
