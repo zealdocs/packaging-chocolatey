@@ -5,7 +5,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>zeal.install</id>
-    <version>0.7.1</version>
+    <version>0.7.2</version>
     <title>Zeal (Install)</title>
     <authors>Oleg Shparber</authors>
     <owners>trollixx</owners>
@@ -27,7 +27,7 @@
     - [IDE intergation](https://zealdocs.org/usage.html#plugins): VS Code, IDEA, Sublime Text, and many others.
 ]]></description>
     <summary>A simple offline documentation browser inspired by Dash.</summary>
-    <releaseNotes>https://github.com/zealdocs/zeal/releases/tag/v0.7.1</releaseNotes>
+    <releaseNotes>https://github.com/zealdocs/zeal/releases/tag/v0.7.2</releaseNotes>
     <copyright>Copyright © 2015-2024 Oleg Shparber</copyright>
     <tags>zeal admin api dash dev developer docs docset documentation help tools</tags>
     <projectSourceUrl>https://github.com/zealdocs/zeal</projectSourceUrl>
