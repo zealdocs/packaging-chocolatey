@@ -24,7 +24,7 @@
     - Global shortcut support for quick access.
     - Fast search across installed docsets.
     - Search prefixes to limit scope to select docsets.
-    - [IDE intergation](https://zealdocs.org/usage.html#plugins): VS Code, IDEA, Sublime Text, and many others.
+    - [IDE integration](https://zealdocs.org/usage.html#plugins): VS Code, IDEA, Sublime Text, and many others.
 ]]></description>
     <summary>A simple offline documentation browser inspired by Dash.</summary>
     <releaseNotes>https://github.com/zealdocs/zeal/releases/tag/v0.7.2</releaseNotes>
